@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import Card from '../src/component/Card';
 import './App.css';
 
 function App() {
+  let data = [
+    {
+      date: "28/10/2020",
+      logo: "https://pngimg.com/uploads/amazon/small/amazon_PNG27.png",
+      heading: "Amazon Gift",
+      subheading: "Pay",
+      devices: "Desktop",
+      color: "orange",
+    },
+    {
+      date: "17 Sep 2020",
+      logo: "https://pngimg.com/uploads/apple_logo/small/apple_logo_PNG19666.png",
+      heading: "Apple Gift",
+      subheading: "Payment",
+      devices: "MacOS",
+      color: "gray",
+    },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Card data={data}/>
     </div>
   );
 }
